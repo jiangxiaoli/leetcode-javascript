@@ -8,6 +8,7 @@ If you still see your function signature returns a char * or String, please clic
 *
 * */
 
+//accept 77ms
 function implementStrStr(haystack, needle){
 	var p=0;
 
