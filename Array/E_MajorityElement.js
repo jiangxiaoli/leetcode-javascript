@@ -3,6 +3,7 @@
 //
 // You may assume that the array is non-empty and the majority element always exist in the array.
 
+//ac, 114ms
 function majorityElement(num) {
     var n = num.length;
     if(n == 1) return num[0];
