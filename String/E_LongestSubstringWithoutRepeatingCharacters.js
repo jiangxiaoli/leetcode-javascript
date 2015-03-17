@@ -4,22 +4,23 @@ For "bbbbb" the longest substring is "b", with the length of 1.*/
 
 //two pointers
 
-function longestSubstring(str){
+//accept 260ms
+function longestSubstring(s){
 	// var p=0, q=0; //p: start of the sub, q: end of the queue
 
 	//hashmap in js????? Array.indexOf
 	var sub = [];
 	var max = 0;
 
-	for(var i = 0; i< str.length; i++){
-		var index= sub.indexOf(str.charAt(i));
+	for(var i = 0; i< s.length; i++){
+		var index= sub.indexOf(s.charAt(i));
 		if(index == -1){
-			sub.push(str.charAt(i));
+			sub.push(s.charAt(i));
 			// q++;
 		} else {
 			//find repeat, get index of repeat el, remve all el before that index
 			sub = sub.slice(index+1, sub.length);
-			sub.push(str.charAt(i));
+			sub.push(s.charAt(i));
 		}
 		max = Math.max(max, sub.length);
 	}
