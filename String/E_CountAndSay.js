@@ -12,6 +12,7 @@ Note: The sequence of integers will be represented as a string.
 *
 * */
 
+ //ac 153ms
 function countAndSay(n){
 	var seq = "", temp = "1";
     for(var i = 1; i<= n; i++){
