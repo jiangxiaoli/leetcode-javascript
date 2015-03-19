@@ -10,19 +10,18 @@
  */
 
 //add from begin to end - done
- function merge(arr1, arr2){
+//ac 154 ms
+function merge(A, B){
  	//merge arr2 into arr1
  	var index = 0;
- 	for(var i = 0; i < arr2.length; i++){
- 		// console.log("arr2 index: " + i +" is " + arr2[i]);
- 		while(arr2[i] > arr1[index] && index < arr1.length) {		
+ 	for(var i = 0; i < B.length; i++){
+
+ 		while(B[i] > A[index] && index < A.length) {
  			index++;
  		}
- 		// console.log("insert index: " + index);
-		arr1.splice(index, 0, arr2[i]); //check splice api, first insert index, delete 0, add el
+		A.splice(index, 0, B[i]); //check splice api, first insert index, delete 0, add el
 
  	}
- 	return arr1;
  }
 
 //add from end to begin - done

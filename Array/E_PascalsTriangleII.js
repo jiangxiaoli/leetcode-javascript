@@ -12,6 +12,7 @@
 *
 * */
 
+//ac 137 ms
 function pascalTriangleII(rowIndex){
 	var result = [];
 	//init result array

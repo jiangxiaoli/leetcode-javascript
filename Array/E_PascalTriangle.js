@@ -18,8 +18,12 @@
  *
  */
 
+//ac 146ms
 function pascalTriangle(numRows){
-	if(numRows == 1) {
+    if(numRows == 0) {
+        return [];
+    }
+    if(numRows == 1) {
 		return [[1]];
 	}
 
