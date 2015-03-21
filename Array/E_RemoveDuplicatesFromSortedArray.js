@@ -8,8 +8,9 @@
 
 // Your function should return length = 2, and A is now [1,2].
 
-function removeDup(arr){
-	var n = arr.length;
+//ac 180ms
+function removeDup(A){
+	var n = A.length;
 	if(n <= 1){
 		return n;
 	}
@@ -18,19 +19,17 @@ function removeDup(arr){
 	var p = 0, q = 0; //p hold the start of dup, q holds the end of dup
 
 	while(q < n){
-		if(arr[p] === arr[q]){
+		if(A[p] === A[q]){
 			q++;
 		} else {
 			p++; //save the dup el, move to the next same el to replace with different el
-			arr[p] = arr[q]; //replace dup with the first different el
+			A[p] = A[q]; //replace dup with the first different el
 			q++; //search next el
 		}
 	}
 
 	//trim array
-	arr.splice(p+1, n-p-1);//remove the rest el, start from the 
-
-	console.log(arr);
+	A.splice(p+1, n-p-1);//remove the rest el, start from the
 
 	return p+1;
 }

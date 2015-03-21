@@ -4,26 +4,23 @@
 // The order of elements can be changed. 
 // It doesn't matter what you leave beyond the new length.
 
-function removeElement(arr, val){
-
-	console.log(arr);
-
+//ac 142ms
+function removeElement(A, elem){
 	//if val is not in arr, return original arr length
-	if(arr.indexOf(val) === -1){
-		return arr.length;
+	if(A.indexOf(elem) === -1){
+		return A.length;
 	}
 
 	var index = 0;
-	for(var i = 0; i < arr.length; i++){
+	for(var i = 0; i < A.length; i++){
 
 		//remove val in array by move forward the other element
-		if(arr[i] !== val){
-			arr[index++] = arr[i];
+		if(A[i] !== elem){
+			A[index++] = A[i];
 		}
 	}
 
-	arr.splice(index, arr.length-index); //modify the changed array, remove rest elements
-	console.log(arr);
+	A.splice(index, A.length-index); //modify the changed array, remove rest elements
 
 	return index;	
 }
