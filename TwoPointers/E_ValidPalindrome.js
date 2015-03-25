@@ -14,12 +14,10 @@
  *
  */
 
+//ac 227ms
 function isAlphanumeric(char){
-	if(char == " " || char >= 'z' || char <= 'a' || char >= '9' || char <= '0'){ //check blank, non-alpha, non-numeric
-		return false;
-	} else {
-		return true;
-	}
+    var regex =/^[a-z0-9]+$/i;
+    return regex.test(char);
 }
 
 function validPalindrome(str){
@@ -34,7 +32,8 @@ function validPalindrome(str){
 	//two pointers
 	var p = 0, q = str.length-1;
 	while(p < q){
-		//check if non-alphanumeric characters, p++ or q--
+
+        //check if non-alphanumeric characters, p++ or q--
 		while(!isAlphanumeric(str.charAt(p)) && p < q){
 			p++;
 		}
@@ -43,7 +42,7 @@ function validPalindrome(str){
 			q--;
 		}
 
-		if(str.charAt(p) == str.charAt(q)){
+		if(str.charAt(p) === str.charAt(q)){
 			p++;
 			q--;
 		} else if(p<q) {
@@ -58,8 +57,9 @@ var str = "abc d dcb a";
 var str2 = ".,";
 var str3 = "Bab";
 var str4 = ".....a....";
+var str5 ="ab";
 
-console.log(validPalindrome(str2));
+console.log(validPalindrome(str5));
 
 
 

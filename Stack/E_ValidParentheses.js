@@ -10,12 +10,13 @@ The brackets must close in the correct order, "()" and "()[]{}" are all valid bu
 //tag stack
 
 //done
-function validParentheses(str){
+//ac 134ms
+function validParentheses(s){
 	//use js array, push, pop
 	//if "(" "{" "[", push, if ")" "}" "]" pop, the final array should be empty
 	var array = [];
-	for(var i =0; i< str.length; i++){
-		var curr = str.charAt(i);
+	for(var i =0; i< s.length; i++){
+		var curr = s.charAt(i);
 		if(curr === "(" || curr === "{" || curr === "[" ){
 			array.push(curr);
 		} else {
@@ -27,8 +28,7 @@ function validParentheses(str){
 				array.push(curr);
 			}
 
-		}		
-		console.log(array);
+		}
 	}
 	if(array.length != 0){
 		return false;

@@ -8,6 +8,7 @@ Return "100".
 *
 * */
 
+//ac 150ms
 function addBinary(a, b){
 	var m = a.length, n = b.length;
 	var indexa, indexb;

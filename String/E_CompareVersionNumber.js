@@ -14,11 +14,11 @@ Here is an example of version numbers ordering:
 0.1 < 1.1 < 1.2 < 13.37
 * */
 
-
-function compareVersionNumber(version1, version2){
+//ac 140ms
+function compareVersionNumber(a, b){
 	//split version by digits
-    var a = version1.split(".");
-    var b = version2.split(".");
+    var a = a.split(".");
+    var b = b.split(".");
 
     //get rid of useless 0
     a = removeZero(a);
